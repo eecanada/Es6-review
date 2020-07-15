@@ -15,3 +15,15 @@ console.log(y)
 let x = 1 
 x = 3
 let x = 2 // error
+
+
+///////////////////////////////////////////////////////SCOPE//////////////////////////////////////////////////////
+console.log(x) // temperal dead zone
+
+const x = 1 
+
+// the x is in the if block and only accessible there
+if(true){ 
+  const x = 1
+  console.log(x)
+}
