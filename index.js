@@ -29,12 +29,24 @@ var y = 3 // still works
 
 
 ///////////////////////////////////////////////////////SCOPE//////////////////////////////////////////////////////
-console.log(x) // temperal dead zone
+console.log(x) // temperal dead zone, cant access x before it has been declared
 
 const x = 1 
 
+
 // the x is in the if block and only accessible there
 if(true){ 
-  const x = 1
+  const x = 1 // const and let are not hoisted
   console.log(x)
 }
+
+{
+  let x = 1 
+  console.log(x) //1
+  {
+    let x = 2 
+    console.log(x) // 2
+  }
+}
+
+// function declaration and expressions would work the same as const and let
