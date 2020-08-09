@@ -14,10 +14,18 @@ console.log(y)
 
 ///////////////////////////////////////////////////////LET////////////////////////////////////////////////////////
 
-// the difference betwwen let and const is the the let variables value can change, however I cannot redefine x again like with var
+// the difference betwwen let and const is the the let variables value can be assigned multiple times, but I cannot keep declaring it, with var I can delare a variable many times and it will still output a value
 let x = 1 
 x = 3
 let x = 2 // error
+
+let x; // I can even declare x without assiging it a value, but if I were to do that with const it would not work
+
+var y = 1
+var y = 3 // still works 
+
+
+
 
 
 ///////////////////////////////////////////////////////SCOPE//////////////////////////////////////////////////////
