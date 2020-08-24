@@ -135,8 +135,25 @@
 
 ///////////////////////////////////////////////////////TEMPLATE LITERAL//////////////////////////////////////////
 
-//multi-line
-var message = `Hi my name is 
-eder and i love to code`
+// //multi-line
+// var message = `Hi my name is 
+// eder and i love to code`
 
-console.log(message)
+// console.log(message)
+
+// const activities = ['reading', 'coding','working out', 'traveling', 'living']
+// const messages = `My name is Eder and I enjoy  ${activities.join(', ')}`
+// console.log(messages)
+
+
+////////////////////////////////////////////////COMPUTED PROPERTY NAMES//////////////////////////////////////////
+
+var key = 'lastname'
+
+var person = {
+  firstname: 'bob',
+  [key]: 'can',
+  ['age']: 20
+}
+
+console.log(person)
