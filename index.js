@@ -162,13 +162,26 @@
 ////////////////////////////////////////////////METHOD PROPERTIES//////////////////////////////////////////
 
 
-var person = {
-  firstname: 'eder',
-  age: 24,
-  haveABirthday(){
-    this.age++
+// var person = {
+//   firstname: 'eder',
+//   age: 24,
+//   haveABirthday(){
+//     this.age++
+//   }
+// }
+
+// person.haveABirthday()
+// console.log(person.age)//21
+
+
+////////////////////////////////////////////////CLASSES/////////////////////////////////////////////////////
+
+class Person {
+  constructor(name, age){
+    this.name = name,
+    this.age = age
   }
 }
 
-person.haveABirthday()
-console.log(person.age)//21
+const eder = new Person('eder', 25)
+console.log(eder)
