@@ -148,12 +148,27 @@
 
 ////////////////////////////////////////////////COMPUTED PROPERTY NAMES//////////////////////////////////////////
 
-var key = 'lastname'
+// var key = 'lastname'
+
+// var person = {
+//   firstname: 'bob',
+//   [key]: 'can',
+//   ['age']: 20
+// }
+
+// console.log(person)
+
+
+////////////////////////////////////////////////METHOD PROPERTIES//////////////////////////////////////////
+
 
 var person = {
-  firstname: 'bob',
-  [key]: 'can',
-  ['age']: 20
+  firstname: 'eder',
+  age: 24,
+  haveABirthday(){
+    this.age++
+  }
 }
 
-console.log(person)
+person.haveABirthday()
+console.log(person.age)//21
