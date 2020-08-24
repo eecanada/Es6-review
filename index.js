@@ -108,8 +108,35 @@
 
 ///////////////////////////////////////////////////////REST OPERATOR/////////////////////////////////////////////
 
-function print(age, siblings,...arr){
-  console.log(arr) //-->'hello', 'world',0
-}
+// // I cannot define another arguement after my first rest operator
+// function print(age, siblings,...arr){
+//   console.log(arr) //-->'hello', 'world',0
+// }
 
-print(25,4,'hello', 'world',0)
+// print(25,4,'hello', 'world',0)
+
+
+///////////////////////////////////////////////////////REST OPERATOR/////////////////////////////////////////////
+
+// // the rets allows me to concatenate an array 
+// function print(...args){
+  
+//   args = [0,1,...args,5,6,7]
+//   console.log(args) // 
+// }
+// print(2,3,4) 
+
+// // using the rest operator I can split a string into an array
+// const message =  'hello eder'
+// const chars = [...message]
+// console.log(chars)
+
+  
+
+///////////////////////////////////////////////////////TEMPLATE LITERAL//////////////////////////////////////////
+
+//multi-line
+var message = `Hi my name is 
+eder and i love to code`
+
+console.log(message)
