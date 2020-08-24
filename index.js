@@ -183,5 +183,18 @@ class Person {
   }
 }
 
-const eder = new Person('eder', 25)
-console.log(eder)
+// const eder = new Person('eder', 25)
+// console.log(eder)
+
+////////////////////////////////////////////////EXTENDS/////////////////////////////////////////////////////
+class Employee extends Person{
+  constructor(years, name, age){
+    super(name, age)
+    this.years = years
+    this.name = this.name
+    this.age = age
+  }
+}
+
+const employee = new Employee(10, 'eder', 25)
+console.log(employee)
