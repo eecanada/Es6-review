@@ -98,12 +98,18 @@
 
 ///////////////////////////////////////////////////////ARROW FUNCTION/////////////////////////////////////////////
 
-// I can pass in a number, string, array, object 
-function buy (item = "eggs", amount = 1){
-  console.log(item, amount)
-}
+// // I can pass in a number, string, array, object 
+// function buy (item = "eggs", amount = 1){
+//   console.log(item, amount)
+// }
 
-buy('eggs')
+// buy('eggs')
 
 
 ///////////////////////////////////////////////////////REST OPERATOR/////////////////////////////////////////////
+
+function print(age, siblings,...arr){
+  console.log(arr) //-->'hello', 'world',0
+}
+
+print(25,4,'hello', 'world',0)
