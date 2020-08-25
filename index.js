@@ -205,7 +205,7 @@
  function getName(){
   return new Promise((resolve, reject)=>{
    setTimeout(()=>{
-     resolve('eder')
+     reject('an error has occured')
    },1000)
   })
  }
@@ -218,6 +218,7 @@
    })
  }
 
+ // can only pass one value at a time
 //  getName()
 //   .then(name =>{
 //     return name
@@ -228,10 +229,15 @@
 //       console.log(`${age}`)
 //     })
 
+// how to get data from functions
 Promise.all([getName(),getAge()])
  .then(([name, age]) => {
   console.log(`${name} is ${age}`)
  })
+ // catch is for rejected promises
+  .catch(err =>{
+    console.log(err)
+  })
 
 //  getName((name)=>{
 //    console.log(name)
