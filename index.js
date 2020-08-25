@@ -176,25 +176,48 @@
 
 ////////////////////////////////////////////////CLASSES/////////////////////////////////////////////////////
 
-class Person {
-  constructor(name, age){
-    this.name = name,
-    this.age = age
-  }
-}
+// class Person {
+//   constructor(name, age){
+//     this.name = name,
+//     this.age = age
+//   }
+// }
 
 // const eder = new Person('eder', 25)
 // console.log(eder)
 
 ////////////////////////////////////////////////EXTENDS/////////////////////////////////////////////////////
-class Employee extends Person{
-  constructor(years, name, age){
-    super(name, age)
-    this.years = years
-    this.name = this.name
-    this.age = age
-  }
-}
+// class Employee extends Person{
+//   constructor(years, name, age){
+//     super(name, age)
+//     this.years = years
+//     this.name = this.name
+//     this.age = age
+//   }
+// }
 
-const employee = new Employee(10, 'eder', 25)
-console.log(employee)
+// const employee = new Employee(10, 'eder', 25)
+// console.log(employee)
+
+
+////////////////////////////////////////////////PROMISES/////////////////////////////////////////////////////
+
+ function getName(cb){
+   setTimeout(()=>{
+     cb('eder')
+   },1000)
+ }
+
+ function getAge(cb){
+   setTimeout(()=>{
+     cb(10)
+   },4000)
+ }
+ 
+ getName((name)=>{
+   console.log(name)
+   getAge((age)=>{
+     console.log(age)
+   })
+ })
+
