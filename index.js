@@ -202,22 +202,37 @@
 
 ////////////////////////////////////////////////PROMISES/////////////////////////////////////////////////////
 
- function getName(cb){
+ function getName(){
+  return new Promise((resolve, reject)=>{
    setTimeout(()=>{
-     cb('eder')
+     resolve('eder')
    },1000)
+  })
  }
 
- function getAge(cb){
-   setTimeout(()=>{
-     cb(10)
-   },4000)
- }
- 
- getName((name)=>{
-   console.log(name)
-   getAge((age)=>{
-     console.log(age)
+ function getAge(){
+   return new Promise((resolve, reject)=>{
+     setTimeout(()=>{
+       resolve(25)
+     },1000)
    })
- })
+ }
+
+ getName()
+  .then(name =>{
+    return name
+    console.log(name)
+  })
+    .then(getAge)
+    .then(age =>{
+      console.log(`${age}`)
+    })
+
+
+//  getName((name)=>{
+//    console.log(name)
+//    getAge((age)=>{
+//      console.log(age)
+//    })
+//  })
 
