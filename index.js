@@ -218,16 +218,20 @@
    })
  }
 
- getName()
-  .then(name =>{
-    return name
-    console.log(name)
-  })
-    .then(getAge)
-    .then(age =>{
-      console.log(`${age}`)
-    })
+//  getName()
+//   .then(name =>{
+//     return name
+//     console.log(name)
+//   })
+//     .then(getAge)
+//     .then(age =>{
+//       console.log(`${age}`)
+//     })
 
+Promise.all([getName(),getAge()])
+ .then(([name, age]) => {
+  console.log(`${name} is ${age}`)
+ })
 
 //  getName((name)=>{
 //    console.log(name)
